@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>CSS - Position</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="header">
+            <div class="logo">
+                <img src="images/swastik.png" />
+            </div>
+            <div class="company-name">
+                <h2>Swastik College</h2>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li>About us 1</li>
+                        <li>About us 2</li>
+                        <li>About us 3</li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-sidebar">
+                <div class="adv">
+                    Advertiesements
+                </div>
+            </div>
+
+            <div class="page">
+                <h1 id="pageName" class="something">Employees</h1>
+                
+                <div class="form box">
+                    <form name="myForm">
+                        <input type="hidden" name="editID" id="editID" value="">
+                        <div>
+                            <label>Name:</label>
+                            <label><input type="text" name="name" /></label>
+                        </div>
+
+                        <div>
+                            <label>Email:</label>
+                            <label><input type="text" name="email" /></label>
+                        </div>
+
+                        <div>
+                            <label>Address:</label>
+                            <label><input type="text" name="address" /></label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="button" value="Add" name="btnAdd"  id="btnAdd">
+                                
+                                <input type="button" value="Save" name="btnSave"  id="btnSave">
+
+                                <input type="button" value="Remove All" name="btnRemoveAll" id="btnRemoveAll">
+                            </label>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="result">
+                    <table class="table" border="0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="mytable">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; copyright at company name
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+
+</html>

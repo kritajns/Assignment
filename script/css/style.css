@@ -1,0 +1,208 @@
+/*.wrapper {
+    width: 500;
+    height: 300;
+    border: 1px red solid;
+    margin: 0;
+}*/
+
+.inner {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+    background: grey;
+}
+
+.wrapper .inner p {
+    text-decoration: underline;
+}
+
+.wrapper .inner1 p,
+.testgroup ul li {
+    color: red;
+}
+
+ul li:first-child {
+    /*text-decoration: underline;*/
+}
+
+ul li:hover {
+    color: green;
+}
+
+
+/** This is for position **/
+
+.wrapper {
+    width: 900px;
+    height: auto;
+    border: 1px solid green;
+}
+
+#wrapper {
+    border: 1px dashed green;
+    /*position: absolute;*/
+    left: 0px;
+    top: 0px;
+    margin: auto;
+}
+
+.header {
+    background: #f1f1f1;
+    height: 120px;
+    overflow: hidden;
+}
+
+.logo {
+    width: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 250px;
+}
+
+.company-name {
+    width: 580px;
+    float: right;
+}
+
+.fixed {
+    position: fixed;
+    right: 0px;
+    top: 200px;
+}
+
+.navigation {
+    float: right;
+    background: red;
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+.navigation ul li {
+    list-style: none;
+    float: left;
+    padding-left: 10px;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 2px;
+    background: lightblue;
+}
+
+.navigation ul li ul{
+    display: none;
+}
+
+.navigation ul li a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.navigation ul li:hover > ul{
+    display: block;
+}
+
+.content {
+    clear: both;
+}
+
+.left-sidebar {
+    float: left;
+    width: 200px;
+    background: #d1d1d1;
+    height: 100%;
+    display: block;
+}
+
+.page {
+    float: left;
+}
+
+.box {
+    width: 400px;
+    
+    border: 1px solid blue;
+    
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.box input{
+    padding: 2px;
+}
+
+.box label{
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.box input[type=button]{
+    margin-top: 10px;
+}
+
+.footer {
+    clear: both;
+    height: 100px;
+    background: #f1f1f1;
+    border-top: 1px solid #000;
+}
+
+
+.hidden {
+    display: none;
+    height: 50px;
+    width: 100px;
+}
+
+.show:hover + .hidden{
+    display: block;
+}
+
+.row {
+    padding: 5px;
+}
+
+.row label.caption {
+    width: 150px;
+}
+
+#mytable {
+    width: 600px;
+}
+
+.error{
+    color: red;
+}
+
+.success{
+    color: green;
+}
+
+.form{
+    float: left;
+    width: 200px;
+}
+
+.result{
+    float: left;
+    margin-left: 10px;
+}
+
+.table{
+    
+    width: 400px;
+}
+.table tr th{
+    text-align: left;
+    background: #f1f1f1;
+}
+
+.table tr td{
+    background: #f0f0f0;
+}

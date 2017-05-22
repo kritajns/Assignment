@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title>CSS - Position</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="fixed" id="fixedElement" onclick="modifyText()">
+        This is fixed element
+    </div>
+
+    <div class="wrapper" id="wrapper">
+        <div class="header">
+            <div class="logo">
+                <img src="images/swastik.png" />
+            </div>
+            <div class="company-name">
+                <h2>Swastik College</h2>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li>About us 1</li>
+                        <li>About us 2</li>
+                        <li>About us 3</li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-sidebar">
+                <div class="adv">
+                    Advertiesements
+                </div>
+            </div>
+
+            <div class="page">
+                <h1 id="pageName">Page Name</h1>
+                    <a href="#" onclick="movePageTitle()">Move Title</a>
+                <div class="box">
+                    <form name="myForm">
+                        <div class="row">
+                            <label class="caption">Name*:</label>
+                            <label><input type="text" name="name" /></label>
+                        </div>
+
+                        <div class="row">
+                            <label class="caption">Email*:</label>
+                            <label><input type="text" name="email" /></label>
+                        </div>
+
+                        <div class="row">
+                            <label class="caption">Address:</label>
+                            <label><input type="text" name="address" /></label>
+                        </div>
+
+                        <div class="row">
+                            <label class="caption">Age*:</label>
+                            <label><input type="text" name="age" /></label>
+                        </div>
+
+                        <div class="error"></div>
+
+                        <div class="success"></div>
+
+                        <div class="row">
+                            <input type="button" value="Submit" name="btnSubmit" onclick="getValues()">
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <table border="1" id="mytable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Age</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; copyright at company name
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    function getValues(){
+        var name    = document.myForm.name.value;
+        var email   = document.myForm.email.value;
+        var address = document.myForm.address.value;
+        var age     = parseInt(document.myForm.age.value);
+
+        let validated = false;
+
+        let errorElement = document.querySelector(".error");
+        let successElement = document.querySelector(".success");
+
+        if(name == "" || email == "" || age == "" || age != NaN){
+            errorElement.innerHTML = "Please fill all the required (*) fields.";
+            successElement.innerText = "";
+        }
+        else{
+            errorElement.innerHTML = "";
+            validated = true;
+        }
+
+        if(validated === true && age < 18){
+            errorElement.innerHTML = "You are not eligible. You have to be at least 18.";
+            successElement.innerText = "";
+            validated = false;
+        }
+
+        if(validated === true){
+            var myTable = document.getElementById("mytable");
+
+            var exitingHtml = mytable.innerHTML;
+
+            var newHtml = '<tr><td>' + name + '</td><td>' + email + '</td><td>' + address + '</td><td>' + age + '</td></tr>';
+
+            myTable.innerHTML = exitingHtml + newHtml;
+
+            successElement.innerText = "Successfully added.";
+
+            clearForm();
+
+        }
+    }
+
+    function clearForm(){
+        document.myForm.name.value = "";
+        document.myForm.email.value = "";
+        document.myForm.address.value = "";
+        document.myForm.age.value = "";
+    }
+    </script>
+</body>
+
+</html>
